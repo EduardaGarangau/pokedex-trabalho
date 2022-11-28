@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PokemonDetails">
+
+    <ImageView
+        android:id="@+id/pokemon_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/name_pokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontWeight="900"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_image" />
+
+    <LinearLayout
+        android:id="@+id/layout_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_pokemon">
+
+        <TextView
+            android:id="@+id/pokemon_type1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="#FC0905"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/pokemon_type2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#FC0905"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_ability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontWeight="900"
+        android:text="Abilities:"
+        android:textColor="#FC0905"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/layout_types"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="@+id/layout_types"
+        app:layout_constraintTop_toBottomOf="@+id/layout_types" />
+
+    <TextView
+        android:id="@+id/ability_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_ability" />
+
+    <TextView
+        android:id="@+id/ability_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ability_1" />
+
+    <TextView
+        android:id="@+id/title_moves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:fontWeight="900"
+        android:text="Moves:"
+        android:textColor="#FC0905"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/layout_types"
+        app:layout_constraintTop_toBottomOf="@+id/layout_types" />
+
+    <TextView
+        android:id="@+id/move_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/title_moves"
+        app:layout_constraintTop_toBottomOf="@+id/title_moves" />
+
+    <TextView
+        android:id="@+id/move_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/move_1" />
+
+    <TextView
+        android:id="@+id/title_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop='8dp'
+        android:layout_marginEnd="168dp"
+        android:fontWeight="900"
+        android:text="Stats:"
+        android:textColor="#FC0905"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/move_2" />
+
+    <LinearLayout
+        android:id="@+id/hp_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_stats">
+
+        <TextView
+            android:id="@+id/hp_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/hp_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/attack_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hp_layout">
+
+        <TextView
+            android:id="@+id/attack_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/attack_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/defense_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attack_layout">
+
+        <TextView
+            android:id="@+id/defense_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/defense_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/special_attack_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defense_layout">
+
+        <TextView
+            android:id="@+id/special_attack_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/special_attack_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/special_defense_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/special_attack_layout">
+
+        <TextView
+            android:id="@+id/special_defense_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/special_defense_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speed_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop='15dp'
+        android:layout_marginEnd="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/special_defense_layout">
+
+        <TextView
+            android:id="@+id/speed_name"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/speed_value"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:background="#4BDD0F"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#7B1FA2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

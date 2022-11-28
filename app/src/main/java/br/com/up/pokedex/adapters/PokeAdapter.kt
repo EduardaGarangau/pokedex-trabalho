@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.up.pokedex.R
 import br.com.up.pokedex.extensions.id
@@ -51,10 +52,23 @@ class PokeAdapter(private val pokeList:List<Pokemon>,
         val imageView : ImageView =
             holder.itemView.findViewById(R.id.image_pokemon)
 
+        imageView.setOnClickListener{
+            callback(pokemon)
+        }
+
+
         Picasso.get().load(url).into(imageView)
+
+        val pokemonName : TextView = holder.itemView.findViewById(R.id.pokemon_name)
+        pokemonName.text= pokemon.name.capitalize()
+
     }
 
     override fun getItemCount(): Int {
         return pokeList.size
     }
+
 }
+
+
+

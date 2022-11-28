@@ -4,5 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 data class PokeApiResponse(
     @SerializedName("results")
-    var pokemons:List<Pokemon>
+    var pokemons:List<Pokemon>,
 )
+

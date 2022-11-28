@@ -3,6 +3,7 @@ package br.com.up.pokedex.network
 import android.util.Log
 import br.com.up.pokedex.models.PokeApiResponse
 import br.com.up.pokedex.models.Pokemon
+import br.com.up.pokedex.models.PokemonType
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -48,9 +49,29 @@ class PokeApi {
 
     }
 
+    fun getPokemonById(id:String,
+                         listener: (Pokemon?) -> Unit){
 
+        val call = apiService?.getPokemonById(id)
 
+        call?.enqueue(object : Callback<Pokemon>{
+            override fun onResponse(call: Call<Pokemon>,
+                                    response: Response<Pokemon>) {
 
+                listener(response.body())
+            }
 
+            override fun onFailure(call: Call<Pokemon>,
+                                   t: Throwable) {
+                listener(null)
+            }
+        })
 
+    }
 }
+
+
+
+
+
+
